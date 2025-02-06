@@ -8,9 +8,9 @@ const Appbar = () => {
     <header className="h-16 bg-primary-foreground border-b">
       <div className="h-full max-w-7xl mx-auto md:px-2 px-6">
         <div className="h-full flex md:flex-row flex-col items-center md:justify-between justify-center gap-6">
-          <div>
+          <Link href="/">
             <Image src="/logo.png" width={48} height={48} className="w-12 h-12" priority alt="logo" />
-          </div>
+          </Link>
 
           <nav className="md:flex hidden items-center gap-6">
             <ThemeSwitch />

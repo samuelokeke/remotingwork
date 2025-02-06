@@ -11,4 +11,4 @@ export interface Job {
   jobUrl: string;
 }
 
-export type StateData = { jobs: Job[]; locations?: []; salaryRanges?: [] };
+export type StateData = { jobs: Job[]; locations?: string[]; salaryRanges?: string[] };
