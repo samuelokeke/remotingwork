@@ -2,15 +2,16 @@
 
 import React, { useContext } from "react";
 import JobCard from "@/components/shared/JobCard";
-import { Job } from "@/lib/interfaces/job.interface";
+import { StateData } from "@/lib/interfaces/job.interface";
 import Featured from "@/components/shared/Featured";
 import SearchBar from "@/components/shared/SearchBar";
 import { JobContext } from "@/context/job.context";
 
 type JobListProps = {
-  jobs: Job[];
+  state: StateData;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const JobList = (props: JobListProps) => {
   const { jobs, filteredJobs } = useContext(JobContext)!;
 

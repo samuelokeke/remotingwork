@@ -1,14 +1,20 @@
 import React from "react";
 import JobList from "./JobList";
+import { Job } from "@/lib/interfaces/job.interface";
 
 export default async function JobsPage() {
-  /** use this instead if you use an API */
-  const data = await fetch("http://localhost:3001/api");
-  const jobs = await data.json();
+  let jobs: Job[] = [];
+
+  try {
+    const data = await fetch("http://localhost:3001/api");
+    jobs = await data.json();
+  } catch (error: unknown) {
+    console.warn(error);
+  }
 
   return (
     <div>
-      <JobList jobs={jobs} />
+      <JobList state={{ jobs: jobs }} />
     </div>
   );
 }

@@ -6,7 +6,9 @@ export interface Job {
   category: string;
   company: string;
   bonus: string[];
-  requirements: any[];
-  qualifications: any[];
+  requirements: string[];
+  qualifications: string[];
   jobUrl: string;
 }
+
+export type StateData = { jobs: Job[]; locations?: []; salaryRanges?: [] };
