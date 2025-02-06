@@ -12,7 +12,7 @@ import { Job } from "@/lib/interfaces/job.interface";
 import Link from "next/link";
 
 type JobDetailModalProps = {
-  params: { id: number };
+  params: Promise<{ id: number }>;
 };
 
 const JobDetailModal = async ({ params }: JobDetailModalProps) => {
