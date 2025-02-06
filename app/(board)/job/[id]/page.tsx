@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 type JobDetailProps = {
-  params: { id: number };
+  params: Promise<{ id: number }>;
 };
 
 const JobDetail = async ({ params }: JobDetailProps) => {
