@@ -6,5 +6,12 @@ export const revalidate = 60;
 export async function GET() {
   const response: { jobs: Job[] } = data;
 
-  return Response.json(response);
+  return Response.json(response, {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*", // Allow all origins (change this for security)
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 }
