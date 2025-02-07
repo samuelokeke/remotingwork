@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = ".next"
 
+[[edge_functions]]
+  function = "api"
+  path = "/api/*"
+
 [[redirects]] # Important for API routes
   from = "/api/*"
   to = "/.netlify/functions/api/:splat"
