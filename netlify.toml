@@ -6,7 +6,7 @@
   function = "api"
   path = "/api/*"
 
-[[redirects]] # Important for API routes
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/api/:splat"
   status = 200  
