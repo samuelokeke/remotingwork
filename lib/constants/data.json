@@ -8,6 +8,7 @@
       "category": "Software Engineering",
       "company": "Google",
       "companyLogoUrl": "",
+      "country": "Canada",
       "location": "Mountain View, CA",
       "salary": 150000,
       "bonus": ["Stock options", "Performance bonus", "Annual retreat"],
@@ -18,7 +19,8 @@
       ],
       "qualifications": ["Bachelor's degree in Computer Science or related field"],
       "jobUrl": "https://careers.google.com/jobs/frontend-engineer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 2,
@@ -28,6 +30,7 @@
       "category": "Software Engineering",
       "company": "Meta",
       "companyLogoUrl": "",
+      "country": "Remote",
       "location": "Remote",
       "salary": 140000,
       "bonus": ["Annual performance bonus", "Health insurance", "Remote work stipend"],
@@ -38,7 +41,8 @@
       ],
       "qualifications": ["Bachelor's degree in Computer Science or equivalent experience"],
       "jobUrl": "https://meta.com/careers/backend-engineer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": true
     },
     {
       "id": 3,
@@ -48,6 +52,7 @@
       "category": "Design",
       "company": "Figma",
       "companyLogoUrl": "",
+      "country": "Canada",
       "location": "San Francisco, CA",
       "salary": 130000,
       "bonus": ["Stock options", "Flexible working hours"],
@@ -58,7 +63,8 @@
       ],
       "qualifications": ["Degree in Design or related field"],
       "jobUrl": "https://figma.com/careers/product-designer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 4,
@@ -68,6 +74,7 @@
       "category": "DevOps",
       "company": "Amazon Web Services",
       "companyLogoUrl": "",
+      "country": "US",
       "location": "Seattle, WA",
       "salary": 145000,
       "bonus": ["Stock grants", "401(k) matching"],
@@ -78,7 +85,8 @@
       ],
       "qualifications": ["Certification in AWS DevOps preferred"],
       "jobUrl": "https://aws.amazon.com/careers/devops",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": true
     },
     {
       "id": 5,
@@ -88,6 +96,7 @@
       "category": "Data Science",
       "company": "Netflix",
       "companyLogoUrl": "",
+      "country": "Canada",
       "location": "Los Angeles, CA",
       "salary": 160000,
       "bonus": ["Stock options", "Gym membership reimbursement"],
@@ -98,7 +107,8 @@
       ],
       "qualifications": ["Master’s or PhD in Data Science, Mathematics, or related field"],
       "jobUrl": "https://jobs.netflix.com/data-scientist",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 6,
@@ -108,6 +118,7 @@
       "category": "Cybersecurity",
       "company": "Microsoft",
       "companyLogoUrl": "",
+      "country": "US",
       "location": "Redmond, WA",
       "salary": 155000,
       "bonus": ["Security certification sponsorships", "Flexible work schedule"],
@@ -118,7 +129,8 @@
       ],
       "qualifications": ["CISSP or OSCP certification preferred"],
       "jobUrl": "https://careers.microsoft.com/cybersecurity-engineer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 7,
@@ -128,6 +140,7 @@
       "category": "Artificial Intelligence",
       "company": "OpenAI",
       "companyLogoUrl": "",
+      "country": "Canada",
       "location": "San Francisco, CA",
       "salary": 170000,
       "bonus": ["Equity options", "Flexible work schedule"],
@@ -138,7 +151,8 @@
       ],
       "qualifications": ["PhD in AI, Computer Science, or related field"],
       "jobUrl": "https://openai.com/careers/ai-research-engineer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 8,
@@ -148,6 +162,7 @@
       "category": "Software Engineering",
       "company": "Spotify",
       "companyLogoUrl": "",
+      "country": "Remote",
       "location": "Remote",
       "salary": 135000,
       "bonus": ["Flexible working hours", "Music streaming subscription"],
@@ -158,7 +173,8 @@
       ],
       "qualifications": ["Bachelor’s degree in Computer Science"],
       "jobUrl": "https://spotify.com/careers/mobile-engineer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 9,
@@ -168,6 +184,7 @@
       "category": "Blockchain",
       "company": "Coinbase",
       "companyLogoUrl": "",
+      "country": "Remote",
       "location": "Remote",
       "salary": 180000,
       "bonus": ["Crypto bonuses", "Remote-first culture"],
@@ -178,7 +195,8 @@
       ],
       "qualifications": ["Previous experience in blockchain projects preferred"],
       "jobUrl": "https://coinbase.com/careers/blockchain-developer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     },
     {
       "id": 10,
@@ -188,6 +206,7 @@
       "category": "Technical Writing",
       "company": "Stripe",
       "companyLogoUrl": "",
+      "country": "Remote",
       "location": "Remote",
       "salary": 120000,
       "bonus": ["Learning stipend", "Work-from-home allowance"],
@@ -198,11 +217,13 @@
       ],
       "qualifications": ["Bachelor’s degree in English, CS, or related field"],
       "jobUrl": "https://stripe.com/careers/technical-writer",
-      "contractType": "Full-time"
+      "contractType": "Full-time",
+      "featured": false
     }
   ],
 
   "locations": [
+    "Remote",
     "US",
     "Canada",
     "Sweden",
@@ -221,9 +242,15 @@
   ],
 
   "salaryRanges": [
-    "300000 — 500000",
-    "500000 — 800000",
-    "800000 — 1000000",
+    "100000 — 150000",
+    "150000 — 200000",
+    "200000 — 250000",
+    "250000 — 300000",
+    "300000 — 350000",
+    "350000 — 400000",
+    "400000 — 450000",
+    "450000 — 500000",
+    "500000 — 1000000",
     "1000000 — 1500000",
     "1500000 — 2000000",
     "2000000 — 2500000",

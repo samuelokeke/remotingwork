@@ -6,8 +6,8 @@ import { createContext, PropsWithChildren, useEffect, useState } from "react";
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 type CreateContextType = {
-  jobs: StateData;
-  updateJobs: (jobs: Job[]) => void;
+  store: StateData;
+  updateStore: (data: Job[]) => void;
   filteredJobs: { jobs: Job[] };
   updateFilteredJobs: (jobs: Job[]) => void;
 };
@@ -18,14 +18,14 @@ const initialState = {
   salaryRanges: [],
 };
 
-export const JobContext = createContext<CreateContextType | null>(null);
+export const StoreContext = createContext<CreateContextType | null>(null);
 
-export function JobContextProvider({ children }: PropsWithChildren) {
-  const [jobs, setJobs] = useState<StateData>(initialState);
+export function StoreContextProvider({ children }: PropsWithChildren) {
+  const [store, setStore] = useState<StateData>(initialState);
   const [filteredJobs, setFilteredJobs] = useState<{ jobs: Job[] }>({ jobs: [] });
 
-  const updateJobs = (jobs: Job[]) => {
-    setJobs((prev) => ({
+  const updateStore = (jobs: Job[]) => {
+    setStore((prev) => ({
       ...prev,
       jobs: jobs,
     }));
@@ -43,16 +43,19 @@ export function JobContextProvider({ children }: PropsWithChildren) {
       try {
         const response = await fetch(`${API_BASE_URL}`);
         const data = await response.json();
-        setJobs(data);
+        setStore(data);
+        updateFilteredJobs(data.jobs)
       } catch (error) {
         if (error instanceof Error) {
-          setJobs(initialState);
+          setStore(initialState);
         }
       }
     })();
   }, []);
 
   return (
-    <JobContext.Provider value={{ jobs, updateJobs, filteredJobs, updateFilteredJobs }}>{children}</JobContext.Provider>
+    <StoreContext.Provider value={{ store, updateStore, filteredJobs, updateFilteredJobs }}>
+      {children}
+    </StoreContext.Provider>
   );
 }

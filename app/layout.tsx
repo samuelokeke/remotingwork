@@ -3,7 +3,7 @@ import { Geist, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeSwitchProvider } from "@/components/ThemeSwitchProvider";
-import { JobContextProvider } from "@/context/job.context";
+import { StoreContextProvider } from "@/context/store.context";
 
 const InterSans = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} ${InterSans.className} antialiased`}>
         <ThemeSwitchProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
-          <JobContextProvider>{children}</JobContextProvider>
+          <StoreContextProvider>{children}</StoreContextProvider>
 
           <Toaster />
         </ThemeSwitchProvider>

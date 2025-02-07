@@ -1,13 +1,22 @@
 "use client";
 
-import { JobContext } from "@/context/job.context";
+import { StoreContext } from "@/context/store.context";
 import React, { useContext } from "react";
 import { z } from "zod";
 import { debounce } from "@/lib/utils";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const formSchema = z.object({
   search: z.optional(
@@ -15,30 +24,31 @@ const formSchema = z.object({
       message: "Search query must be at least 2 characters.",
     })
   ),
-  location: z.string({ required_error: "location must be selected." }),
-  salary: z.string({ required_error: "Salary range must be selected." }),
+  country: z.string().min(2, { message: "Country must be selected." }),
+  salary: z.string().min(2, { message: "Salary range must be selected." }),
 });
 
-const SearchBar = () => {
-  const { jobs, updateFilteredJobs } = useContext(JobContext)!;
+const FilterOptions = () => {
+  const [key, setKey] = React.useState(+new Date());
+  const { store, updateFilteredJobs } = useContext(StoreContext)!;
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       search: "",
-      location: "",
+      country: "",
       salary: "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const search = values.search;
-    const location = values.location;
-    const [low, high] = values.salary?.split(" — ");
+    const country = values.country;
+    const [low, high] = values.salary ? values.salary.split(" — ") : [0, Number.MAX_VALUE];
 
-    const jobsFiltered = jobs.jobs.filter((job) => {
+    const jobsFiltered = store.jobs.filter((job) => {
       return (
         job.title.toLowerCase().includes(search!.toLowerCase()) &&
-        job.location.toLowerCase() === location?.toLowerCase() &&
+        job.country.toLowerCase() === country?.toLowerCase() &&
         job.salary >= +low &&
         job.salary <= +high
       );
@@ -50,7 +60,7 @@ const SearchBar = () => {
   const debouncedChange = debounce((event: React.ChangeEvent<HTMLInputElement>) => {
     const search = event.target.value?.toLowerCase();
 
-    const jobsFiltered = jobs.jobs.filter((job) => job.title.toLowerCase().includes(search));
+    const jobsFiltered = store.jobs.filter((job) => job.title.toLowerCase().includes(search));
 
     updateFilteredJobs(jobsFiltered);
   }, 500);
@@ -69,7 +79,7 @@ const SearchBar = () => {
                     {...fieldOptions}
                     type="search"
                     placeholder="Search job..."
-                    className="flex h-9 w-full rounded-s border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    className="flex h-9 w-full rounded border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                     defaultValue={value}
                     onChange={debouncedChange}
                   />
@@ -77,33 +87,43 @@ const SearchBar = () => {
               </FormItem>
             )}
           />
-
-          <button
-            type="submit"
-            className="bg-primary text-primary-foreground rounded-e shadow hover:bg-primary/90 h-9 px-4 py-1"
-          >
-            Search
-          </button>
         </div>
 
         <FormField
           control={form.control}
-          name="location"
+          name="country"
           render={({ field }) => (
             <FormItem>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select key={key} onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a location" />
+                    <SelectValue placeholder="Select a country" />
                   </SelectTrigger>
                 </FormControl>
 
                 <SelectContent>
-                  {jobs.locations?.map((location, i) => (
-                    <SelectItem key={i} value={location}>
-                      {location}
-                    </SelectItem>
-                  ))}
+                  <Button
+                    className="w-full px-2"
+                    variant="secondary"
+                    size="sm"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      form.setValue("country", "");
+                      setKey(+new Date());
+                    }}
+                  >
+                    Clear
+                  </Button>
+
+                  <SelectSeparator />
+
+                  <SelectGroup>
+                    {store.locations?.map((location, i) => (
+                      <SelectItem key={i} value={location}>
+                        {location}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
                 </SelectContent>
               </Select>
             </FormItem>
@@ -123,11 +143,28 @@ const SearchBar = () => {
                 </FormControl>
 
                 <SelectContent>
-                  {jobs.salaryRanges?.map((salary, i) => (
-                    <SelectItem key={i} value={salary}>
-                      {salary}
-                    </SelectItem>
-                  ))}
+                  <Button
+                    className="w-full px-2"
+                    variant="secondary"
+                    size="sm"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      form.setValue("salary", "");
+                      setKey(+new Date());
+                    }}
+                  >
+                    Clear
+                  </Button>
+
+                  <SelectSeparator />
+
+                  <SelectGroup>
+                    {store.salaryRanges?.map((salary, i) => (
+                      <SelectItem key={i} value={salary}>
+                        {salary}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
                 </SelectContent>
               </Select>
             </FormItem>
@@ -135,6 +172,7 @@ const SearchBar = () => {
         />
 
         <button
+          disabled={!form.formState.isValid}
           type="submit"
           className="bg-primary text-primary-foreground rounded shadow hover:bg-primary/90 h-9 px-4 py-1"
         >
@@ -145,4 +183,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default FilterOptions;
