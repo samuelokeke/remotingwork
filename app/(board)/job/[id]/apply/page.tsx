@@ -2,8 +2,10 @@ import ApplyForm from "@/components/shared/ApplyForm";
 import Featured from "@/components/shared/Featured";
 import React from "react";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 const ApplyFormPage = async () => {
-  const data = await fetch("http://localhost:3001/api");
+  const data = await fetch(`${API_BASE_URL}`);
   const jobs = await data.json();
 
   return (

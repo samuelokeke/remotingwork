@@ -6,9 +6,11 @@ type JobDetailProps = {
   params: Promise<{ id: number }>;
 };
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 const JobDetail = async ({ params }: JobDetailProps) => {
   const id = (await params)?.id;
-  const data = await fetch(`http://localhost:3001/api/${id}`);
+  const data = await fetch(`${API_BASE_URL}/${id}`);
   const job: Job = await data.json();
 
   return (

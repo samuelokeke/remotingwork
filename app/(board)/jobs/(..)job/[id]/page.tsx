@@ -11,13 +11,15 @@ import {
 import { Job } from "@/lib/interfaces/job.interface";
 import Link from "next/link";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 type JobDetailModalProps = {
   params: Promise<{ id: number }>;
 };
 
 const JobDetailModal = async ({ params }: JobDetailModalProps) => {
   const id = (await params)?.id;
-  const data = await fetch(`http://localhost:3001/api/${id}`);
+  const data = await fetch(`${API_BASE_URL}/${id}`);
   const job: Job = await data.json();
 
   return (

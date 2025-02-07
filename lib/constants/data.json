@@ -2,56 +2,234 @@
   "jobs": [
     {
       "id": 1,
-      "title": "Software Engineer",
-      "description": "I am a software",
-      "date": "2025-02-12",
-      "category": "",
-      "company": "",
-      "bonus": [],
-      "requirements": ["HTML", "CSS", "React"],
-      "qualifications": ["AWS"],
-      "jobUrl": "",
-      "contractType": "fulltime"
+      "title": "Senior Frontend Engineer",
+      "description": "Build scalable frontend applications using React and Next.js.",
+      "date": "2025-02-06",
+      "category": "Software Engineering",
+      "company": "Google",
+      "companyLogoUrl": "",
+      "location": "Mountain View, CA",
+      "salary": 150000,
+      "bonus": ["Stock options", "Performance bonus", "Annual retreat"],
+      "requirements": [
+        "5+ years of experience with React and Next.js",
+        "Strong proficiency in TypeScript",
+        "Experience with state management libraries (Redux, Zustand)"
+      ],
+      "qualifications": ["Bachelor's degree in Computer Science or related field"],
+      "jobUrl": "https://careers.google.com/jobs/frontend-engineer",
+      "contractType": "Full-time"
     },
     {
       "id": 2,
-      "title": "Cyber Security",
-      "description": "I am a software",
-      "date": "2025-02-12",
-      "category": "",
-      "company": "",
-      "bonus": [],
-      "requirements": ["HTML", "CSS", "React"],
-      "qualifications": ["AWS"],
-      "jobUrl": "",
-      "contractType": "remote"
+      "title": "Backend Engineer (Node.js)",
+      "description": "Develop and optimize server-side applications using Node.js and Express.",
+      "date": "2025-02-06",
+      "category": "Software Engineering",
+      "company": "Meta",
+      "companyLogoUrl": "",
+      "location": "Remote",
+      "salary": 140000,
+      "bonus": ["Annual performance bonus", "Health insurance", "Remote work stipend"],
+      "requirements": [
+        "Strong knowledge of Node.js, Express, and MongoDB",
+        "Experience with cloud services (AWS, GCP)",
+        "Understanding of microservices architecture"
+      ],
+      "qualifications": ["Bachelor's degree in Computer Science or equivalent experience"],
+      "jobUrl": "https://meta.com/careers/backend-engineer",
+      "contractType": "Full-time"
     },
     {
       "id": 3,
-      "title": ".Net Engineer",
-      "description": "I am a software",
-      "date": "2025-02-12",
-      "category": "",
-      "company": "",
-      "bonus": [],
-      "requirements": ["HTML", "CSS", "React"],
-      "qualifications": ["AWS"],
-      "jobUrl": "",
-      "contractType": "contract"
+      "title": "Product Designer",
+      "description": "Design intuitive and user-friendly interfaces for SaaS products.",
+      "date": "2025-02-06",
+      "category": "Design",
+      "company": "Figma",
+      "companyLogoUrl": "",
+      "location": "San Francisco, CA",
+      "salary": 130000,
+      "bonus": ["Stock options", "Flexible working hours"],
+      "requirements": [
+        "Proficiency in Figma, Sketch, and Adobe Suite",
+        "Strong understanding of UI/UX principles",
+        "Experience with user research and A/B testing"
+      ],
+      "qualifications": ["Degree in Design or related field"],
+      "jobUrl": "https://figma.com/careers/product-designer",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 4,
+      "title": "DevOps Engineer",
+      "description": "Manage CI/CD pipelines and infrastructure automation.",
+      "date": "2025-02-06",
+      "category": "DevOps",
+      "company": "Amazon Web Services",
+      "companyLogoUrl": "",
+      "location": "Seattle, WA",
+      "salary": 145000,
+      "bonus": ["Stock grants", "401(k) matching"],
+      "requirements": [
+        "Experience with Docker and Kubernetes",
+        "Proficiency in Terraform and AWS services",
+        "Understanding of CI/CD pipelines"
+      ],
+      "qualifications": ["Certification in AWS DevOps preferred"],
+      "jobUrl": "https://aws.amazon.com/careers/devops",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 5,
+      "title": "Data Scientist",
+      "description": "Analyze data to drive business insights and product improvements.",
+      "date": "2025-02-06",
+      "category": "Data Science",
+      "company": "Netflix",
+      "companyLogoUrl": "",
+      "location": "Los Angeles, CA",
+      "salary": 160000,
+      "bonus": ["Stock options", "Gym membership reimbursement"],
+      "requirements": [
+        "Experience with Python, SQL, and machine learning frameworks",
+        "Ability to work with large datasets",
+        "Strong statistical and analytical skills"
+      ],
+      "qualifications": ["Master’s or PhD in Data Science, Mathematics, or related field"],
+      "jobUrl": "https://jobs.netflix.com/data-scientist",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 6,
+      "title": "Cybersecurity Engineer",
+      "description": "Secure enterprise networks and cloud environments.",
+      "date": "2025-02-06",
+      "category": "Cybersecurity",
+      "company": "Microsoft",
+      "companyLogoUrl": "",
+      "location": "Redmond, WA",
+      "salary": 155000,
+      "bonus": ["Security certification sponsorships", "Flexible work schedule"],
+      "requirements": [
+        "Experience with penetration testing and vulnerability assessments",
+        "Knowledge of cloud security best practices",
+        "Proficiency in Python or Bash scripting"
+      ],
+      "qualifications": ["CISSP or OSCP certification preferred"],
+      "jobUrl": "https://careers.microsoft.com/cybersecurity-engineer",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 7,
+      "title": "AI Research Engineer",
+      "description": "Develop and optimize AI models for various applications.",
+      "date": "2025-02-06",
+      "category": "Artificial Intelligence",
+      "company": "OpenAI",
+      "companyLogoUrl": "",
+      "location": "San Francisco, CA",
+      "salary": 170000,
+      "bonus": ["Equity options", "Flexible work schedule"],
+      "requirements": [
+        "Experience with TensorFlow, PyTorch, and deep learning models",
+        "Knowledge of NLP and computer vision",
+        "Strong mathematical background in statistics and linear algebra"
+      ],
+      "qualifications": ["PhD in AI, Computer Science, or related field"],
+      "jobUrl": "https://openai.com/careers/ai-research-engineer",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 8,
+      "title": "Mobile Engineer (React Native)",
+      "description": "Develop and optimize mobile applications using React Native.",
+      "date": "2025-02-06",
+      "category": "Software Engineering",
+      "company": "Spotify",
+      "companyLogoUrl": "",
+      "location": "Remote",
+      "salary": 135000,
+      "bonus": ["Flexible working hours", "Music streaming subscription"],
+      "requirements": [
+        "Experience with React Native and TypeScript",
+        "Understanding of mobile performance optimization",
+        "Familiarity with Expo and native modules"
+      ],
+      "qualifications": ["Bachelor’s degree in Computer Science"],
+      "jobUrl": "https://spotify.com/careers/mobile-engineer",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 9,
+      "title": "Blockchain Developer",
+      "description": "Develop decentralized applications and smart contracts.",
+      "date": "2025-02-06",
+      "category": "Blockchain",
+      "company": "Coinbase",
+      "companyLogoUrl": "",
+      "location": "Remote",
+      "salary": 180000,
+      "bonus": ["Crypto bonuses", "Remote-first culture"],
+      "requirements": [
+        "Experience with Solidity and Ethereum smart contracts",
+        "Understanding of DeFi protocols",
+        "Proficiency in Rust or Go"
+      ],
+      "qualifications": ["Previous experience in blockchain projects preferred"],
+      "jobUrl": "https://coinbase.com/careers/blockchain-developer",
+      "contractType": "Full-time"
+    },
+    {
+      "id": 10,
+      "title": "Technical Writer",
+      "description": "Create technical documentation for developers and users.",
+      "date": "2025-02-06",
+      "category": "Technical Writing",
+      "company": "Stripe",
+      "companyLogoUrl": "",
+      "location": "Remote",
+      "salary": 120000,
+      "bonus": ["Learning stipend", "Work-from-home allowance"],
+      "requirements": [
+        "Experience writing API documentation",
+        "Ability to explain complex topics clearly",
+        "Familiarity with Markdown and Git"
+      ],
+      "qualifications": ["Bachelor’s degree in English, CS, or related field"],
+      "jobUrl": "https://stripe.com/careers/technical-writer",
+      "contractType": "Full-time"
     }
   ],
 
-  "locations": ["US", "Canada", "Sweden", "Ghana", "Russia", "Ukraine", "Nigeria", "South Africa"],
+  "locations": [
+    "US",
+    "Canada",
+    "Sweden",
+    "Ghana",
+    "Russia",
+    "Ukraine",
+    "Nigeria",
+    "South Africa",
+    "Rwanda",
+    "France",
+    "Japan",
+    "China",
+    "India",
+    "Turkey",
+    "Uganda"
+  ],
 
   "salaryRanges": [
-    "300,000 - 500,000",
-    "500,000 - 800,000",
-    "800,000 - 1,000,000",
-    "1,000,000 - 1,500,000",
-    "1,500,000 - 1,800,000",
-    "1,800,000 - 2,000,000",
-    "2,000,000 - 2,500,000",
-    "2,500,000 - 3,000,000",
-    "3,000,000 - 4,000,000"
+    "300000 — 500000",
+    "500000 — 800000",
+    "800000 — 1000000",
+    "1000000 — 1500000",
+    "1500000 — 2000000",
+    "2000000 — 2500000",
+    "2500000 — 3000000",
+    "3500000 — 4000000",
+    "4000000 — 4500000",
+    "4500000 — 5000000"
   ]
 }

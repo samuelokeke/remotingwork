@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { Job } from "@/lib/interfaces/job.interface";
+import { formatCurrency } from "@/lib/utils";
+import { ShieldHalf } from "lucide-react";
 
 type JobCardProps = {
   job: Job;
@@ -9,7 +11,9 @@ type JobCardProps = {
 const JobCard = ({ job }: JobCardProps) => {
   return (
     <article className="relative group md:col-span-4 col-span-12 bg-[url('/images/card-particles.png')] bg-no-repeat bg-[length:100px] bg-right-bottom bg-primary-foreground p-4 border-2 rounded hover:bg-white hover:shadow">
-      <div className="absolute -top-7 left-1/2 -translate-x-2/4 w-14 h-14 bg-white border-2 rounded-full"></div>
+      <div className="absolute -top-7 left-1/2 -translate-x-2/4 w-14 h-14 bg-primary grid place-content-center border-2 rounded-full">
+        <ShieldHalf className="text-primary-foreground" />
+      </div>
 
       <div className="h-full flex flex-col gap-4 justify-between items-start">
         <div>
@@ -23,11 +27,11 @@ const JobCard = ({ job }: JobCardProps) => {
           </Link>
 
           <p className="text-sm text-gray-600 dark:group-hover:text-primary-foreground dark:text-gray-200 mb-1">
-            Country
+            {job.location}
           </p>
 
           <p className="text-sm text-gray-600 dark:group-hover:text-primary-foreground dark:text-gray-200">
-            300k &#8212; 800k
+            {formatCurrency(job.salary)}
           </p>
         </div>
 

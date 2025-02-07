@@ -14,11 +14,26 @@ export function cn(...inputs: ClassValue[]) {
  * this returned function can then be used anywhere.
  */
 
-export function debounce(callback: Function, delay: number) {
+export function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
   let timeout: NodeJS.Timeout;
 
-  return function (...args: any) {
+  return function (...args: T) {
     clearTimeout(timeout);
     timeout = setTimeout(() => callback(...args), delay);
   };
 }
+
+/**
+ *
+ * @param amount
+ * @param currency
+ * @param locale
+ * @returns
+ */
+export const formatCurrency = (amount: number, currency: string = "USD", locale: string = "en-US"): string => {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 2, // Ensures two decimal places
+  }).format(amount);
+};
