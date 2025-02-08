@@ -3,7 +3,7 @@
 import { Job, StateData } from "@/lib/interfaces/job.interface";
 import { createContext, PropsWithChildren, useEffect, useState } from "react";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+// const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 type CreateContextType = {
   store: StateData;
@@ -41,10 +41,10 @@ export function StoreContextProvider({ children }: PropsWithChildren) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}`);
+        const response = await fetch(`/api`);
         const data = await response.json();
         setStore(data);
-        updateFilteredJobs(data.jobs)
+        updateFilteredJobs(data.jobs);
       } catch (error) {
         if (error instanceof Error) {
           setStore(initialState);
