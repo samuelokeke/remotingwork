@@ -8,7 +8,7 @@ export default async function JobsPage() {
   let jobs: Job[] = [];
 
   try {
-    const data = await fetch(`${API_BASE_URL}`);
+    const data = await fetch(`${API_BASE_URL}/api`);
     jobs = await data.json();
   } catch (error: unknown) {
     console.warn(error);

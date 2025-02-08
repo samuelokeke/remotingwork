@@ -10,7 +10,7 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const JobDetail = async ({ params }: JobDetailProps) => {
   const id = (await params)?.id;
-  const data = await fetch(`${API_BASE_URL}/${id}`);
+  const data = await fetch(`${API_BASE_URL}/api/${id}`);
   const job: Job = await data.json();
 
   return (

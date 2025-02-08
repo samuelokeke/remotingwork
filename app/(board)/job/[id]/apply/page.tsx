@@ -5,7 +5,7 @@ import React from "react";
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const ApplyFormPage = async () => {
-  const data = await fetch(`${API_BASE_URL}`);
+  const data = await fetch(`${API_BASE_URL}/api`);
   const jobs = await data.json();
 
   return (

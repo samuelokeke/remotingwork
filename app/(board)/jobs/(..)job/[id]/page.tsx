@@ -19,7 +19,7 @@ type JobDetailModalProps = {
 
 const JobDetailModal = async ({ params }: JobDetailModalProps) => {
   const id = (await params)?.id;
-  const data = await fetch(`${API_BASE_URL}/${id}`);
+  const data = await fetch(`${API_BASE_URL}/api/${id}`);
   const job: Job = await data.json();
 
   return (
