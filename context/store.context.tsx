@@ -54,6 +54,8 @@ export function StoreContextProvider({ children }: PropsWithChildren) {
     })();
   }, []);
 
+  if (!API_BASE_URL) return null;
+
   return (
     <StoreContext.Provider value={{ store, updateStore, filteredJobs, updateFilteredJobs }}>
       {children}

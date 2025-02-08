@@ -14,6 +14,8 @@ export default async function JobsPage() {
     console.warn(error);
   }
 
+  if (!API_BASE_URL) return null;
+
   return (
     <div>
       <JobList state={{ jobs: jobs }} />
