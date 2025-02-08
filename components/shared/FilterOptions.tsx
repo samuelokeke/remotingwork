@@ -67,7 +67,7 @@ const FilterOptions = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex items-center gap-3">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-wrap items-center gap-3">
         <div className="group bg-secondary flex items-center focus-within:ring-1 focus-within:ring-ring rounded">
           <FormField
             control={form.control}
