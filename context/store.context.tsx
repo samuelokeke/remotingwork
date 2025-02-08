@@ -41,7 +41,7 @@ export function StoreContextProvider({ children }: PropsWithChildren) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api`);
+        const response = await fetch(`${API_BASE_URL}/api`, { cache: "no-store" });
         const data = await response.json();
 
         setStore(data);
