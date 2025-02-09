@@ -10,7 +10,7 @@ type FeaturedProps = {
 
 const Featured = ({ jobs }: FeaturedProps) => {
   const targetRef = useRef(null);
-  const featuredJobs = jobs.filter((job) => job.featured);
+  const featuredJobs = jobs?.filter((job) => job.featured);
 
   const { scrollYProgress } = useScroll({ target: targetRef, offset: ["center center", "start start"] });
 

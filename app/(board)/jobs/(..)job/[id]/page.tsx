@@ -60,7 +60,11 @@ const JobDetailModal = async ({ params }: JobDetailModalProps) => {
           </div>
 
           <DialogFooter>
-            <Link href={`${job.jobUrl ? job.jobUrl : `/job/${id}/apply`}`}>
+            <Link
+              href={`${job.jobUrl ?? `/job/${id}/apply`}`}
+              target={job.jobUrl ? "_blank" : "_self"}
+              rel={job.jobUrl ? "noopener noreferrer" : undefined}
+            >
               <Button type="submit">Apply to this job</Button>
             </Link>
           </DialogFooter>

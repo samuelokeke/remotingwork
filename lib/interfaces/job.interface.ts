@@ -12,7 +12,7 @@ export interface Job {
   bonus: string[];
   requirements: string[];
   qualifications: string[];
-  jobUrl: string;
+  jobUrl: string | null;
   contractType: string;
   featured: boolean;
 }

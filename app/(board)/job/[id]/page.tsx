@@ -19,7 +19,11 @@ const JobDetail = async ({ params }: JobDetailProps) => {
         <div className="flex md:flex-row flex-col justify-between items-start gap-4 mb-8">
           <h1 className="text-xl font-bold">{job.title}</h1>
 
-          <Link href={`${job.jobUrl ? job.jobUrl : `/job/${id}/apply`}`}>
+          <Link
+            href={`${job.jobUrl ?? `/job/${id}/apply`}`}
+            target={job.jobUrl ? "_blank" : "_self"}
+            rel={job.jobUrl ? "noopener noreferrer" : undefined}
+          >
             <button className="bg-primary text-primary-foreground py-1 px-3 rounded">Apply for this role</button>
           </Link>
         </div>
@@ -50,15 +54,15 @@ const JobDetail = async ({ params }: JobDetailProps) => {
               ))}
             </ul>
           </div>
-
-          <Link href={`${job.jobUrl ? job.jobUrl : `/job/${id}/apply`}`}>
-            <button className="bg-primary text-primary-foreground py-1 px-3 rounded">Apply for this role</button>
-          </Link>
         </div>
       </div>
 
-      <div className="fixed bottom-0 z-20 w-full h-14 md:px-2 px-6 bg-secondary border-t flex items-center">
-        <Link href={`${job.jobUrl ? job.jobUrl : `/job/${id}/apply`}`}>
+      <div className="fixed bottom-0 z-20 md:hidden w-full h-14 md:px-2 px-6 bg-secondary border-t flex items-center">
+        <Link
+          href={`${job.jobUrl ?? `/job/${id}/apply`}`}
+          target={job.jobUrl ? "_blank" : "_self"}
+          rel={job.jobUrl ? "noopener noreferrer" : undefined}
+        >
           <button className="bg-primary text-primary-foreground py-1 px-3 rounded">Apply for this role</button>
         </Link>
       </div>

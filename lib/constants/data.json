@@ -18,7 +18,7 @@
         "Experience with state management libraries (Redux, Zustand)"
       ],
       "qualifications": ["Bachelor's degree in Computer Science or related field"],
-      "jobUrl": "https://careers.google.com/jobs/frontend-engineer",
+      "jobUrl": null,
       "contractType": "Full-time",
       "featured": false
     },
@@ -40,7 +40,7 @@
         "Understanding of microservices architecture"
       ],
       "qualifications": ["Bachelor's degree in Computer Science or equivalent experience"],
-      "jobUrl": "https://meta.com/careers/backend-engineer",
+      "jobUrl": "https://www.metacareers.com/jobs/774198984091403/",
       "contractType": "Full-time",
       "featured": true
     },
@@ -62,7 +62,7 @@
         "Experience with user research and A/B testing"
       ],
       "qualifications": ["Degree in Design or related field"],
-      "jobUrl": "https://figma.com/careers/product-designer",
+      "jobUrl": "https://job-boards.greenhouse.io/figma/jobs/5396579004?gh_jid=5396579004",
       "contractType": "Full-time",
       "featured": false
     },
@@ -84,7 +84,7 @@
         "Understanding of CI/CD pipelines"
       ],
       "qualifications": ["Certification in AWS DevOps preferred"],
-      "jobUrl": "https://aws.amazon.com/careers/devops",
+      "jobUrl": null,
       "contractType": "Full-time",
       "featured": true
     },
@@ -106,7 +106,7 @@
         "Strong statistical and analytical skills"
       ],
       "qualifications": ["Master’s or PhD in Data Science, Mathematics, or related field"],
-      "jobUrl": "https://jobs.netflix.com/data-scientist",
+      "jobUrl": null,
       "contractType": "Full-time",
       "featured": false
     },
@@ -128,7 +128,7 @@
         "Proficiency in Python or Bash scripting"
       ],
       "qualifications": ["CISSP or OSCP certification preferred"],
-      "jobUrl": "https://careers.microsoft.com/cybersecurity-engineer",
+      "jobUrl": "https://jobs.careers.microsoft.com/global/en/job/1805155/Senior-Cyber-Security-Engineer---Networking",
       "contractType": "Full-time",
       "featured": false
     },
@@ -150,7 +150,7 @@
         "Strong mathematical background in statistics and linear algebra"
       ],
       "qualifications": ["PhD in AI, Computer Science, or related field"],
-      "jobUrl": "https://openai.com/careers/ai-research-engineer",
+      "jobUrl": "https://openai.com/careers/research-engineer/",
       "contractType": "Full-time",
       "featured": false
     },
@@ -172,7 +172,7 @@
         "Familiarity with Expo and native modules"
       ],
       "qualifications": ["Bachelor’s degree in Computer Science"],
-      "jobUrl": "https://spotify.com/careers/mobile-engineer",
+      "jobUrl": null,
       "contractType": "Full-time",
       "featured": false
     },
@@ -194,7 +194,7 @@
         "Proficiency in Rust or Go"
       ],
       "qualifications": ["Previous experience in blockchain projects preferred"],
-      "jobUrl": "https://coinbase.com/careers/blockchain-developer",
+      "jobUrl": "https://www.coinbase.com/en-gb/careers/positions/6327608",
       "contractType": "Full-time",
       "featured": false
     },
@@ -216,7 +216,7 @@
         "Familiarity with Markdown and Git"
       ],
       "qualifications": ["Bachelor’s degree in English, CS, or related field"],
-      "jobUrl": "https://stripe.com/careers/technical-writer",
+      "jobUrl": null,
       "contractType": "Full-time",
       "featured": false
     }
