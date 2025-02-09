@@ -4,8 +4,7 @@ import React from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { Textarea } from "../ui/textarea";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -63,6 +62,8 @@ const ApplyForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+
+    console.info(values);
 
     await toast({
       title: "Job application sent!",
@@ -135,6 +136,7 @@ const ApplyForm = () => {
           <FormField
             control={form.control}
             name="resume"
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             render={({ field: { value, onChange, ...fieldOptions } }) => (
               <FormItem>
                 <FormLabel>Resume</FormLabel>
@@ -160,14 +162,14 @@ const ApplyForm = () => {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a verified email to display" />
+                      <SelectValue placeholder="Select your year of experience" />
                     </SelectTrigger>
                   </FormControl>
 
                   <SelectContent>
                     {[...Array(experienceYears).keys()].map((_, i) => (
                       <SelectItem key={i} value={(i + 1).toString()}>
-                        {i + 1}
+                        {i + 1} year{i > 0 ? "s" : ""}
                       </SelectItem>
                     ))}
                   </SelectContent>
