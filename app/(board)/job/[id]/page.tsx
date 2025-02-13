@@ -15,7 +15,7 @@ const JobDetail = async ({ params }: JobDetailProps) => {
 
   return (
     <div className="relative bg-secondary">
-      <div className="h-full max-w-7xl mx-auto md:px-2 px-6 py-12">
+      <div className="h-full max-w-7xl mx-auto md:px-4 px-6 py-12">
         <div className="flex md:flex-row flex-col justify-between items-start gap-4 mb-8">
           <h1 className="text-xl font-bold">{job.title}</h1>
 
