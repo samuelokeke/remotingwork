@@ -19,7 +19,7 @@ const Appbar = () => {
               Find jobs
             </Link>
 
-            <div className="flex items-center gap-2 rounded p-1 border">
+            <div className="flex items-center gap-2 rounded-lg p-1 border">
               <Link
                 href="#"
                 className="h-10 grid place-content-center py-2 px-4 rounded-md text-sm bg-secondary text-secondary-foreground"
