@@ -15,7 +15,7 @@ export default function AuthLayout({
     <section>
       <div className="w-full lg:max-w-7xl mx-auto lg:px-0 px-4">
         <div className="w-full min-h-screen grid grid-cols-12 gap-6 items-center border-red-500">
-          <div className="col-span-6 h-full bg-gradient-to-tr from-indigo-600 via-slate-800 to-blue-500 p-8 grid place-content-center">
+          <div className="lg:col-span-6 col-span-12 h-full bg-gradient-to-tr from-indigo-600 via-slate-800 to-blue-500 p-8 grid place-content-center">
             <AuthHeader />
 
             <div className="mb-12">
@@ -30,7 +30,7 @@ export default function AuthLayout({
             <p className="text-3xl font-light ">We want to join you in your job seeking journey.</p>
           </div>
 
-          <div className="col-span-6">{children}</div>
+          <div className="lg:col-span-6 col-span-12">{children}</div>
         </div>
       </div>
     </section>
