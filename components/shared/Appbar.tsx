@@ -21,14 +21,14 @@ const Appbar = () => {
 
             <div className="flex items-center gap-2 rounded-lg p-1 border">
               <Link
-                href="#"
+                href="/login"
                 className="h-10 grid place-content-center py-2 px-4 rounded-md text-sm bg-secondary text-secondary-foreground"
               >
                 Login
               </Link>
 
               <Link
-                href="#"
+                href="/register"
                 className="h-10 grid place-content-center py-2 px-4 rounded-md text-sm bg-primary text-primary-foreground"
               >
                 Sign up

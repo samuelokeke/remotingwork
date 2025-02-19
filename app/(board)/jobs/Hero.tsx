@@ -15,12 +15,12 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center gap-2">
-            <button className="hover:bg-white text-white hover:text-gray-700 border-2 px-10 py-3 rounded-full text-lg font-bold">
+            <button className="hover:bg-white text-white hover:text-gray-700 border-2 border-primary px-10 py-3 rounded-full text-lg font-bold">
               Post a job
             </button>
 
             <p className="text-lg font-medium text-white">
-              for <span className="font-black underline">₦5000</span>
+              for <span className="font-black underline">$500</span>
             </p>
           </div>
         </div>

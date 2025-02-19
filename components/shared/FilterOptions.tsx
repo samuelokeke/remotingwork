@@ -93,7 +93,7 @@ const FilterOptions = () => {
           control={form.control}
           name="country"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="bg-secondary">
               <Select key={key} onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -134,7 +134,7 @@ const FilterOptions = () => {
           control={form.control}
           name="salary"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="bg-secondary">
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>

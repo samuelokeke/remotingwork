@@ -14,7 +14,7 @@ const Featured = ({ jobs }: FeaturedProps) => {
 
   const { scrollYProgress } = useScroll({ target: targetRef, offset: ["start end", "start center"] });
 
-  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 0]);
 
   return (
     <motion.div
