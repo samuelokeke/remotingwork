@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeSwitchProvider } from "@/components/ThemeSwitchProvider";
 import { StoreContextProvider } from "@/context/store.context";
+import Appbar from "@/components/shared/Appbar";
+import Footer from "@/components/shared/Footer";
 
 const InterSans = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -12,6 +14,7 @@ const InterSans = Inter({
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -29,7 +32,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} ${InterSans.className} antialiased`}>
         <ThemeSwitchProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
-          <StoreContextProvider>{children}</StoreContextProvider>
+          <StoreContextProvider>
+            <Appbar />
+
+            {children}
+
+            <Footer />
+          </StoreContextProvider>
 
           <Toaster />
         </ThemeSwitchProvider>

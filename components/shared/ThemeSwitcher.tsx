@@ -14,10 +14,10 @@ export default function ThemeSwitcher() {
   if (!mounted) return <>...</>;
 
   if (currentTheme === "dark") {
-    return <SunIcon className="text-primary cursor-pointer" size="24" onClick={() => setTheme("light")} />;
+    return <SunIcon className="text-foreground cursor-pointer" size="24" onClick={() => setTheme("light")} />;
   }
 
   if (currentTheme === "light") {
-    return <MoonIcon className="text-primary cursor-pointer" size="24" onClick={() => setTheme("dark")} />;
+    return <MoonIcon className="text-foreground cursor-pointer" size="24" onClick={() => setTheme("dark")} />;
   }
 }

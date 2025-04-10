@@ -18,19 +18,19 @@ const LoginPage = () => {
       </p>
 
       <div className="flex justify-center my-4">
-        <h3 className="text-2xl font-thin text-primary">Sign in with</h3>
+        <h3 className="text-base font-light text-foreground">Sign in with</h3>
       </div>
 
       <div className="flex flex-wrap justify-center gap-4">
-        <Button className="bg-white hover:bg-gray-100 shadow-none">
+        <Button className="bg-transparent dark:bg-primaryx px-1 shadow-none">
           <Image src="icons/google.svg" width={32} height={32} alt="google" />
         </Button>
 
-        <Button className="bg-white hover:bg-gray-10 shadow-none">
+        <Button className="bg-transparent dark:bg-primaryx px-1 shadow-none">
           <Image src="icons/linkedin.svg" width={32} height={32} alt="linkedin" />
         </Button>
 
-        <Button className="bg-white hover:bg-gray-10 shadow-none">
+        <Button className="bg-transparent dark:bg-primaryx px-1 shadow-none">
           <Image src="icons/x.svg" width={32} height={32} alt="x" />
         </Button>
       </div>

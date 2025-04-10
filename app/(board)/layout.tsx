@@ -1,5 +1,3 @@
-import Appbar from "@/components/shared/Appbar";
-import Footer from "@/components/shared/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,13 +10,5 @@ export default function BoardLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div>
-      <Appbar />
-
-      {children}
-
-      <Footer />
-    </div>
-  );
+  return <div>{children}</div>;
 }

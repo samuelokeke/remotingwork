@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Appbar = () => {
   return (
-    <header className="h-16 bg-primary-foreground border-b">
+    <header className="h-16 bg-background border-b">
       <div className="h-full max-w-7xl mx-auto md:px-2 px-6">
         <div className="h-full flex md:flex-row flex-col items-center md:justify-between justify-center gap-6">
           <Link href="/">
@@ -15,7 +15,7 @@ const Appbar = () => {
           <nav className="md:flex hidden items-center gap-6">
             <ThemeSwitch />
 
-            <Link href="/jobs" className="text-primary">
+            <Link href="/jobs" className="text-foreground">
               Find jobs
             </Link>
 
@@ -29,7 +29,7 @@ const Appbar = () => {
 
               <Link
                 href="/register"
-                className="h-10 grid place-content-center py-2 px-4 rounded-md text-sm bg-primary text-primary-foreground"
+                className="h-10 grid place-content-center py-2 px-4 rounded-md text-sm bg-primary text-white"
               >
                 Sign up
               </Link>

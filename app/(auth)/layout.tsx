@@ -18,16 +18,16 @@ export default function AuthLayout({
           <div className="lg:col-span-6 col-span-12 h-full bg-gradient-to-tr from-indigo-600 via-slate-800 to-blue-500 p-8 grid place-content-center">
             <AuthHeader />
 
-            <div className="mb-12">
+            <div className="mb-8">
               <h1 className="lg:text-6xl text-white text-4xl font-bold mb-1">Sign up today with Key Halo!</h1>
               <div className="w-2/4 h-1 bg-white"></div>
             </div>
 
-            <h3 className="lg:text-5xl text-2xl font-medium text-gray-300 mb-6">
+            <h3 className="lg:text-4xl text-2xl font-light text-white mb-10">
               Get your dream job with KeyHalo, where possibilities are endless.
             </h3>
 
-            <p className="text-3xl text-white font-light">We want to join you in your job seeking journey.</p>
+            <p className="text-xl text-white font-light">We want to join you in your job seeking journey.</p>
           </div>
 
           <div className="lg:col-span-6 col-span-12">{children}</div>

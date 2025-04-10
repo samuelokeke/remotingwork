@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -10,17 +11,17 @@ const Footer = () => {
           <p>© 2020 &#8212; {currentYear} Remoting Work. All Rights Reserved.</p>
 
           <nav className="flex items-center justify-between gap-3">
-            <a href="" className="md:text-base text-sm text-foreground hover:text-primary">
+            <Link href="" className="md:text-base text-sm text-foreground hover:text-primary">
               Terms & conditions
-            </a>
+            </Link>
 
-            <a href="" className="md:text-base text-sm text-foreground hover:text-primary">
+            <Link href="" className="md:text-base text-sm text-foreground hover:text-primary">
               Privacy policy
-            </a>
+            </Link>
 
-            <a href="" className="md:text-base text-sm text-foreground hover:text-primary">
+            <Link href="" className="md:text-base text-sm text-foreground hover:text-primary">
               Sitemap
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
